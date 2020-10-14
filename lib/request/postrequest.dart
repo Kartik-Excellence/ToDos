@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:todos/model/post.dart';
 
 List<Post> postList = new List();
-Future<List<Post>> fetchData() async {
+Future<List<Post>> fetchPost() async {
   final response = await http.get('https://jsonplaceholder.typicode.com/todos');
   List<dynamic> values = List();
   values = json.decode(response.body);
